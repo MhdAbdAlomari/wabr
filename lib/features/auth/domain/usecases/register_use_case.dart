@@ -6,7 +6,7 @@ import 'package:wabr/features/auth/domain/repositories/user_repository.dart';
 class RegisterUseCase {
   final UserRepository userRepository;
   RegisterUseCase({required this.userRepository});
-  Future<Either<Failure, AuthResponse>> call(
+  Future<Either<Failure, AuthResponseEntity>> call(
     String name,
     String email,
     String password,

@@ -6,7 +6,10 @@ import 'package:wabr/features/auth/domain/repositories/user_repository.dart';
 class LoginUsecase {
   final UserRepository userRepository;
   LoginUsecase({required this.userRepository});
-  Future<Either<Failure, AuthResponse>> call(String email, String password) async {
+  Future<Either<Failure, AuthResponseEntity>> call(
+    String email,
+    String password,
+  ) async {
     return await userRepository.login(email, password);
   }
 }

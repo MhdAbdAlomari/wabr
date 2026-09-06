@@ -7,8 +7,8 @@ class GetUserUsecase {
   final UserRepository userRepository;
 
   GetUserUsecase({required this.userRepository});
-  
-  Future<Either<Failure, User>> call() async {
+
+  Future<Either<Failure, UserEntity>> call() async {
     return await userRepository.getUser();
   }
 }

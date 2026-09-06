@@ -1,5 +1,5 @@
 // user.dart
-class User {
+class UserEntity {
   final int id;
   final String name;
   final String email;
@@ -7,23 +7,20 @@ class User {
   final String? avatar;
   final String createdAt;
 
-  User({
+  UserEntity({
     required this.id,
     required this.name,
     required this.email,
-     this.phone,
+    this.phone,
     this.avatar,
     required this.createdAt,
   });
 }
 
 // auth_response.dart
-class AuthResponse {
-  final User user;
+class AuthResponseEntity {
+  final UserEntity user;
   final String token;
 
-  AuthResponse({
-    required this.user,
-    required this.token,
-  });
+  AuthResponseEntity({required this.user, required this.token});
 }
