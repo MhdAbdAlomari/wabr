@@ -3,9 +3,9 @@ import 'package:wabr/core/error/failure.dart';
 import 'package:wabr/features/auth/domain/entities/user_entity.dart';
 import 'package:wabr/features/auth/domain/repositories/user_repository.dart';
 
-class LoginUsecase {
+class LoginUseCase {
   final UserRepository userRepository;
-  LoginUsecase({required this.userRepository});
+  LoginUseCase({required this.userRepository});
   Future<Either<Failure, AuthResponseEntity>> call(
     String email,
     String password,
